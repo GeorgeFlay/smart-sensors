@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Panel główny — IoT</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>🌿 System IoT — Panel główny</h1>
+    <nav>
+        <a href="index.html">Panel główny</a>
+        <a href="historia.html">Historia</a>
+        <a href="ustawienia.html">Ustawienia</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="cards">
+    <div class="card">
+        <h3>Temperatura</h3>
+        <p id="tempValue">-- °C</p>
+    </div>
+    <div class="card">
+        <h3>Wilgotność</h3>
+        <p id="humValue">-- %</p>
+    </div>
+    <div class="card">
+        <h3>Natężenie światła</h3>
+        <p id="lightValue">-- lx</p>
+    </div>
+    </section>
+
+    <section class="charts">
+    <h2>Wykresy pomiarów</h2>
+
+    <div class="chart-card">
+        <h3>Temperatura (°C)</h3>
+        <canvas id="chartTemp"></canvas>
+    </div>
+
+    <div class="chart-card">
+        <h3>Wilgotność (%)</h3>
+        <canvas id="chartHum"></canvas>
+    </div>
+
+    <div class="chart-card">
+        <h3>Natężenie światła (lx)</h3>
+        <canvas id="chartLight"></canvas>
+    </div>
+    </section>
+
+</main>
+
+<footer>Projekt inżynierski — Yehor Kovalov</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
